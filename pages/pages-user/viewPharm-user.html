@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Farmácias da Região</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .mapa {
+      width: 100%;
+      height: auto;
+      border: 2px solid #007bff;
+      border-radius: 10px;
+    }
+
+    .btn-custom {
+      width: 100%;
+      border-radius: 10px;
+      padding: 12px;
+    }
+
+    .footer-text {
+      font-size: 0.875rem;
+      text-align: center;
+      margin-top: 20px;
+      color: #6c757d;
+    }
+
+    .footer-text a {
+      text-decoration: underline;
+      color: #000;
+    }
+  </style>
+</head>
+<body class="bg-white">
+
+  <div class="container py-4" style="max-width: 500px;">
+    <!-- Título -->
+    <h4 class="text-center mb-4">Farmácias da região</h4>
+
+    <!-- Campo de busca e filtro -->
+    <div class="input-group mb-3">
+      <span class="input-group-text bg-white">
+        <i class="bi bi-search"></i>
+      </span>
+      <input type="text" class="form-control" placeholder="Farmácia 1" />
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <select class="form-select w-50">
+        <option selected>Filtrar</option>
+        <option value="1">Mais próximas</option>
+        <option value="2">Aberta agora</option>
+      </select>
+      <span class="text-muted">1 resultado</span>
+    </div>
+
+    <!-- Mapa (imagem simulada) -->
+    <img src="../../assets/Captura de tela de 2025-07-11 10-12-53.png" alt="Mapa" class="mapa mb-4" />
+
+    <!-- Botões -->
+    <div class="d-grid gap-2 mb-4">
+      <button class="btn btn-dark btn-custom">TRAÇAR ROTA</button>
+      <button class="btn btn-light border btn-custom" id="btn-back">CANCELAR</button>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="footer-text">
+      Precisa de ajuda? <a href="#">Fale conosco.</a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS e Ícones -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <script>
+    document.getElementById('btn-back').addEventListener('click', ()=>{
+        window.location.href = "home-user.html"
+    });
+  </script>
+</body>
+</html>

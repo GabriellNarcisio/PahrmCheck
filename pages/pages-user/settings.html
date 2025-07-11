@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Configurações</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .checkbox-square {
+      width: 20px;
+      height: 20px;
+      accent-color: black;
+      border-radius: 4px;
+    }
+
+    .form-check {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .btn-custom {
+      border-radius: 10px;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .footer-text {
+      font-size: 0.875rem;
+      text-align: center;
+      margin-top: 30px;
+      color: #6c757d;
+    }
+
+    .footer-text a {
+      color: black;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body class="bg-white">
+
+  <div class="container py-4" style="max-width: 500px;">
+    <h4 class="text-center mb-4">Configurações</h4>
+
+    <p class="mb-3 fw-bold">Notificações que deseja receber:</p>
+
+    <form id="configForm">
+      <div class="form-check">
+        <label class="form-check-label" for="notifAtualizacoes">Atualizações</label>
+        <input class="form-check-input checkbox-square" type="checkbox" id="notifAtualizacoes" checked>
+      </div>
+
+      <div class="form-check">
+        <label class="form-check-label" for="notifDescontos">Descontos</label>
+        <input class="form-check-input checkbox-square" type="checkbox" id="notifDescontos">
+      </div>
+
+      <div class="form-check">
+        <label class="form-check-label" for="notifNovasFarmacias">Novas farmácias</label>
+        <input class="form-check-input checkbox-square" type="checkbox" id="notifNovasFarmacias">
+      </div>
+
+      <div class="form-check">
+        <label class="form-check-label" for="notifPromocoes">Promoções personalizadas</label>
+        <input class="form-check-input checkbox-square" type="checkbox" id="notifPromocoes" checked>
+      </div>
+
+      <!-- Botões -->
+      <div class="d-grid gap-2 mt-5">
+        <button type="submit" class="btn btn-dark btn-custom">SALVAR</button>
+        <button type="button" class="btn btn-dark btn-custom" id="btn-back">VOLTAR</button>
+      </div>
+    </form>
+
+    <!-- Rodapé -->
+    <div class="footer-text mt-4">
+      Precisa de ajuda? <a href="#">Fale conosco.</a>
+    </div>
+  </div>
+
+  <script>
+
+    document.getElementById("configForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+       document.getElementById('btn-back').addEventListener('click', ()=>{
+        window.location.href = "home-user.html"
+    });
+
+      // Exemplo de leitura dos valores selecionados:
+      const config = {
+        atualizacoes: document.getElementById("notifAtualizacoes").checked,
+        descontos: document.getElementById("notifDescontos").checked,
+        novasFarmacias: document.getElementById("notifNovasFarmacias").checked,
+        promocoes: document.getElementById("notifPromocoes").checked
+      };
+
+      console.log("Preferências salvas:", config);
+      alert("Preferências salvas com sucesso!");
+    });
+  </script>
+</body>
+</html>
