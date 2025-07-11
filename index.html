@@ -9,7 +9,7 @@
 <body>
      <div class="container d-flex flex-column align-items-center justify-content-center vh-100 text-center">
     
-    <img src="../../assets/Logo 2 1.png" alt="Logo" class="img-fluid mb-4" style="max-width: 200px;">
+    <img src="./assets/Logo 2 1.png" alt="Logo" class="img-fluid mb-4" style="max-width: 200px;">
 
     <div class="d-grid gap-3" style="width: 100%; max-width: 300px;">
       <button class="btn btn-dark" id="btn-cad">Fazer Login</button>
@@ -26,31 +26,31 @@
   <script>
     //login do usuario
     document.getElementById('btn-cad').addEventListener('click', () => {
-      window.location.href = 'login-user.html'; // redireciona para tela inicial
+      window.location.href = 'pages/pages-user/login-user.html'; // redireciona para tela inicial
     });
 
     //vizualizar farmacias
      document.getElementById('btn-view-pharms').addEventListener('click', () => {
-      window.location.href = 'viewPharm-user.html'; // redireciona para tela inicial
+      window.location.href = 'pages/pages-user/viewPharm-user.html'; // redireciona para tela inicial
     });
 
     //pesquisar produtos
     document.getElementById('btn-search').addEventListener('click', ()=>{
-      window.location.href = 'search-produtcs.html';
+      window.location.href = 'pages/pages-user/search-produtcs.html';
     });
 
     //ver descontos
     document.getElementById('btn-discounts').addEventListener('click', ()=>{
-      window.location.href = 'view-discounts.html'
+      window.location.href = 'pages/pages-user/view-discounts.html'
     })
 
     //configurações
     document.getElementById('btn-settings').addEventListener('click', ()=>{
-      window.location.href = 'settings.html'
+      window.location.href = 'pages/pages-user/settings.html'
     })
 
     document.getElementById('btn-about').addEventListener('click', ()=>{
-      window.location.href = 'about-app.html'
+      window.location.href = 'pages/pages-user/about-app.html'
     })
   </script>
 </body>
