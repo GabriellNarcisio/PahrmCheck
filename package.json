@@ -1,0 +1,23 @@
+{
+  "name": "pahrmcheck",
+  "version": "1.0.0",
+  "description": "🩺 PharmCheck\r PharmCheck é um sistema desenvolvido como projeto acadêmico para a disciplina de Gerência de Projetos do curso de Bacharelado em Sistemas de Informação da UFERSA – Campus Angicos.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabriellNarcisio/PahrmCheck.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabriellNarcisio/PahrmCheck/issues"
+  },
+  "homepage": "https://github.com/GabriellNarcisio/PahrmCheck#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
